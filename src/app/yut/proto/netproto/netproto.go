@@ -3,7 +3,6 @@ package netproto
 import (
 	"encoding/json"
 	"io"
-	"log"
 	"net/http"
 	l4g "github.com/alecthomas/log4go"
 )
