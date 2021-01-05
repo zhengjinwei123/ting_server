@@ -1,0 +1,5 @@
+src/app/yut/logs/*
+src/app/yut/bin/run/*
+src/app/yut/settings/config.xml
+src/app/yut/settings/log.xml
+src/app/yut/vendor/*
