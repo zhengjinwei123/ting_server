@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	l4g "github.com/alecthomas/log4go"
 )
 
 type SResponse struct {
@@ -23,11 +24,13 @@ func outputJson(data interface{}, status int, w http.ResponseWriter) {
 	}
 	ret_json, _ := json.Marshal(resp)
 
-	//log.Printf("response:data [%v] [%s] \n", resp, ret_json)
-
 	_, err := io.WriteString(w, string(ret_json))
 	if err != nil {
-		log.Printf("outputJson error: %s \n", ret_json)
+		l4g.Error("%s", string(ret_json))
+	}
+
+	if status != 0 {
+		l4g.Error(err.Error())
 	}
 }
 

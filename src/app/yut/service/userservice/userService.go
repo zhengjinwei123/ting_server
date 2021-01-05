@@ -451,7 +451,7 @@ func UploadImage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if !fileutils.IsDir(p + "/upload") {
-		err = os.Mkdir(p + "/upload", os.ModePerm);
+		err = os.MkdirAll(p + "/upload", os.ModePerm);
 		if err != nil {
 			response.Msg = err.Error()
 			response.ResponseError(w)
@@ -462,7 +462,7 @@ func UploadImage(w http.ResponseWriter, r *http.Request) {
 	uploadDir := p + "/upload/" + username + "/"
 	//创建上传目录
 	if !fileutils.IsDir(uploadDir) {
-		err = os.Mkdir(uploadDir, os.ModePerm);
+		err = os.MkdirAll(uploadDir, os.ModePerm);
 		if err != nil {
 			response.Msg = err.Error()
 			response.ResponseError(w)
