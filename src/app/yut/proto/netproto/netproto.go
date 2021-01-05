@@ -25,11 +25,11 @@ func outputJson(data interface{}, status int, w http.ResponseWriter) {
 
 	_, err := io.WriteString(w, string(ret_json))
 	if err != nil {
-		l4g.Error("%s", string(ret_json))
+		l4g.Error("%s", err.Error())
 	}
 
 	if status != 0 {
-		l4g.Error(err.Error())
+		l4g.Error("%s", string(ret_json))
 	}
 }
 
