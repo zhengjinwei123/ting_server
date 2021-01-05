@@ -16,4 +16,9 @@ then
     exit 1
 fi
 
+if [ ! -d "$bin_dir"/run ]
+then
+    mkdir "$bin_dir"/run
+fi
+
 bash "$script_path"/yut-server.init start $server_config_file
