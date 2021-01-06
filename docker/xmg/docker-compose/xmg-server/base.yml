@@ -1,0 +1,24 @@
+version: "2.4"
+
+services:
+    gmdb:
+        image: centos/mysql-57-centos7
+        runtime: runc
+        environment:
+            MYSQL_ROOT_PASSWORD: 123456
+        ports:
+            - "3307:3306"
+
+        volumes:
+            - ./base/gmdb/data:/var/lib/mysql/data:rw
+        networks:
+            xmg_net:
+                ipv4_address: 172.21.1.231
+networks:
+    xmg_net:
+        name: yut_net
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.21.0.0/16
+    

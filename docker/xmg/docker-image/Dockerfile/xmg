@@ -1,0 +1,11 @@
+from  centos:latest
+
+copy yut_start.sh /data/xmg/bin/
+copy stop.sh /data/xmg/bin/
+copy status.sh /data/xmg/bin/
+copy yut-server.init /data/xmg/bin/
+copy yut_server /data/xmg/bin/
+
+run chmod 777 /data/xmg/bin/* -R
+
+ENTRYPOINT ["./yut_start.sh"]

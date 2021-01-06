@@ -1,0 +1,93 @@
+{
+  "menulist" : [
+    [
+      "100,资源管理,fa-files-o,#",
+      "101,图片上传,fa-circle-o,/admin/photo-upload",
+      "102,视频上传,fa-circle-o,/admin/media-upload",
+      "103,资源管理,fa-circle-o,/admin/media-manage"
+    ],
+    [
+      "200,数据统计,fa-pie-chart,#",
+      "201,数据分析,fa-circle-o,/admin/data-analyse",
+      "202,数据查询,fa-circle-o,/admin/data-query"
+    ],
+    [
+      "300,博客,fa-laptop,#",
+      "301,写博客,fa-circle-o,/admin/blog-new",
+      "302,博客管理,fa-circle-o,/admin/blog-manage"
+    ],
+    [
+      "400,用户,fa-edit,#",
+      "401,新建用户,fa-circle-o,/admin/user-new",
+      "402,权限管理,fa-circle-o,/admin/user-auth-manage",
+      "403,用户查询,fa-circle-o,/admin/user-query",
+      "404,基础信息,fa-circle-o,/admin/user-profile"
+    ],
+    [
+      "500,广告,fa-table,#",
+      "501,新建,fa-circle-o,/admin/advert-new",
+      "502,管理,fa-circle-o,/admin/advert-query"
+    ],
+    [
+      "600,游戏,fa-folder,#",
+      "601,列表,fa-circle-o,/admin/game-list",
+      "602,管理,fa-circle-o,/admin/game-manage"
+    ]
+  ],
+  "requestlist": [
+    [
+      "1000,#,资源",
+      "1001,/res/upload,资源上传",
+      "1002,/res/query,资源查询",
+      "1003,/res/delete,资源删除",
+      "1004,/res/publish,资源发布",
+
+      "2000,#,用户",
+      "2001,/user/register,用户注册",
+      "2002,/user/list,用户列表",
+      "2003,/user/delete,用户删除",
+      "2004,/user/update,用户更新",
+      "2005,/user/menulist,用户菜单",
+      "2006,/user/update-password,用户密码修改",
+      "2007,/user/upload-image,上传图片",
+      "2008,/user/del-image,删除图片",
+      "2009,/user/update-profile,更新基础信息",
+      "2010,/user/upload-res,上传资源",
+      "2011,/user/reslist-pagenate,资源列表",
+      "2012,/user/res-delete,删除资源",
+
+      "3000,#,H5游戏",
+      "3001,/h5game/list,h5游戏列表",
+      "3002,/h5game/upload,h5游戏发布",
+      "3003,/h5game/update,h5游戏更新",
+      "3004,/h5game/run/status,h5游戏运行状态查询",
+
+      "4000,#,博客",
+      "4001,/blog/new,博客新建",
+      "4002,/blog/update,博客更新",
+      "4003,/blog/delete,博客删除",
+      "4004,/blog/publish,博客发布",
+      "4005,/blog/add-category,新增博客分类",
+      "4006,/blog/user-blogs,用户博客列表",
+      "4007,/blog/user-categories,用户博客列表",
+      "4008,/blog/user-blogs-pagenate,用户博客列表-分页",
+      "4009,/blog/onekey-publish,一键发布",
+      "4010,/blog/onekey-close,一键关闭",
+
+      "5000,#,广告",
+      "5001,/advert/new,广告新建",
+      "5002,/advert/update,广告更新",
+      "5003,/advert/delete,广告删除",
+      "5004,/advert/publish,广告发布",
+
+      "6000,#,通用",
+      "6001,/global/grouplist,用户分组列表",
+      "6002,/global/authlist,权限列表",
+      "6003,/global/authupdate,权限更新",
+      "6004,/global/group-detail-list,用户组详情列表",
+      "6005,/global/addgroup,新增用户组",
+      "6006,/global/update-group-auth,用户组权限修改",
+      "6007,/global/group-delete,用户组删除"
+    ]
+  ]
+}

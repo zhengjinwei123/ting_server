@@ -1,0 +1,25 @@
+version: "2.4"
+
+services:
+    yut:
+        image: 127.0.0.1:5000/xmg:zjw
+        runtime: runc
+        privileged: true
+        working_dir: /data/xmg/bin
+        volumes:
+            - ./settings:/data/xmg/settings
+            - ./logs:/data/xmg/logs
+            - /etc/localtime:/etc/localtime:ro
+        ports:
+            - "8089:8089"
+            - "9000:9000"
+        extra_hosts:
+            - "gmdb:172.21.1.231"
+        networks:
+            xmg_net:
+                ipv4_address: 172.21.1.1
+
+networks:
+    xmg_net:
+        external:
+            name: yut_net
