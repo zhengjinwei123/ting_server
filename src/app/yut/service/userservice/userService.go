@@ -316,9 +316,7 @@ func ResDelete(w http.ResponseWriter, r *http.Request) {
 	username := userManager.GetUsrSessionMgr().GetUserName(r)
 	err = helperDelUserImage(username, dbRes.ResName)
 	if err != nil {
-		response.Msg = err.Error()
-		response.ResponseError(w)
-		return
+		l4g.Error(err.Error())
 	}
 
 	err = dbuserresservice.DeleteRes(username, request.Id)
